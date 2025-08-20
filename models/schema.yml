@@ -2,8 +2,10 @@ version: 2
 
 models:
   - name: dim_listings_cleansed
+    description: Cleansed table which contains Airbnb listings
     columns:
       - name: listing_id
+        description: primary key for listing
         tests:
           - unique
           - not_null
@@ -27,3 +29,6 @@ models:
       - name: minimum_nights
         tests:
           - positive_value
+
+  - name: dim_hosts_cleansed
+    description: cleansed hosts dimension model
